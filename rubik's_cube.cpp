@@ -15,7 +15,7 @@
 #define CUBESIZE 1.0     /* size of each component cube */
 #define CUBEINTERVAL 0.2  /* space between each component cube */
 
-  /* indices for the six faces of each component cube */
+/* indices for the six faces of each component cube */
 #define BACK 0
 #define FRONT 1
 #define RIGHT 2
