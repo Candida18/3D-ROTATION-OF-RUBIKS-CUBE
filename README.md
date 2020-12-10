@@ -1,24 +1,69 @@
-# Rubiks_Cube-ComputerGraphics
-Implementation:
+DESIGN
 
-Cube data structure:
+>>> Cube data structure:
 
-The 3 x 3 x 3 cube is represented by a 3 x 3 x 3 array, where each array element represents a single component cube. Each array element is defined as a structure, which contains a 8 x 3 array to store the (x,y,z) coordinates of the 8 vertices and a 6 x 3 array to store the color of the 6 faces of each component cube.
+The 3 x 3 x 3 cube is represented by a 3 x 3 x 3 array, where each array element represents a single component cube. Each array element is defined as a structure, which contains a 8 x 3 array to store the (x,y,z) coordinates of the 8 vertices and a 6 x 3 array to store the colour of the 6 faces of each component cube.
 
+>>> Cube initialization:
 
-Cube initialization:
+The original vertex coordinates and face colours are assigned in the function initCube(). The initial cube is centered at (0, 0, 0). It has red for the front face, orange for the back, blue for the left, green for the right, white for the top and yellow for the bottom. All the inside faces are grey. The cube is initially viewed from eye position (5, 5, 5) to give a 3-D view of the cube.
 
-The original vertex coordinates and face colors are assigned in the function initCube(). The initial cube is centered at (0, 0, 0). It has green for the front face, cyan for the back, red for the left, blue for the right, magenta for the top and yellow for the bottom. All the inside faces are gray. The cube is initially viewed from eye position (5, 5, 5) to give a 3-D view of the cube.
+>>> Rotating whole cube:
 
-Rotating whole cube:
+When the J, L, I and K buttons are pressed from the keyboard, the program interprets it as a request from the user to rotate the entire cube, left, right, down and up respectively. 
 
-When the left mouse button is clicked outside the cube, the program interprets it as a request from the user to rotate the entire cube. The program then detects the motion vector of the mouse to determine which direction to rotate the cube.
+>>> How to play:
 
-Rotating one slice of the cube:
+Commands are case-insensitive
 
-When the left mouse button is clicked on the cube, the program interprets it as a request from the user to rotate one slice of the cube. The program first determines which face of which component cube has been selected by reading the mouse pointing position and performing unprojection to get the original world coordinates. It then determines which of the two possible slices containing that component cube to rotate by detecting the motion vector of the mouse. To do this, we have to unproject the window vector back to the world coordinates. Once the rotating slice is decided, it can not be changed within the same mouse dragging session. However, the direction of rotation is sensitive to the direction of the mouse motion. For any direction, the angle of rotation is incremented by 1 degree with each mouse motion of the same direction. We visualize the rotation by first rendering the 2 stationary slices, then adding the rotation matrix, and rendering the rotating slice. The rotation is stopped when user releases the mouse button. The slice is then automatically repositioned to the closest slot. Since the component cubes (in world coordinate system) are always repositioned to the original coordinates, the vertex coordinate of our cube model does not need to be modified after rotation. However, the face colors of the rotating slice must be updated.
+Cube visualization
 
-How to play:
+L: rotate right
 
-If you press your mouse button and hold it in the black area of the window and drag, the whole cube will rotate according to your mouse motion, but if you pushed the mouse button on one facet of the cube, one slice will twist accordingly.
+J: rotate left
 
+I: rotate down
+
+K: rotate up
+
++: zoom in
+
+-: zoom out
+
+mouse left click: zoom in
+
+mouse right click: zoom out
+
+Face selection (for moving parts)
+
+There is no face selection feedback. (Consider left-bottom as origin)
+
+Along x axis
+
+Q: select 1st layer
+
+W: select 2nd layer
+
+E: select 3rd layer
+
+Along y axis
+
+A: select 1st layer
+
+S: select 2nd layer
+
+D: select 3rd layer
+
+Along z axis
+
+Z: select 1st layer
+
+X: select 2nd layer
+
+C: select 3rd layer
+
+Face rotation
+
+O: rotate selected face clockwise
+
+U: rotate selected face counter-clockwise
