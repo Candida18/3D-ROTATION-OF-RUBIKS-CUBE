@@ -1,18 +1,18 @@
 DESIGN
 
->> Cube data structure: <<
+>> Cube data structure: 
 
 The 3 x 3 x 3 cube is represented by a 3 x 3 x 3 array, where each array element represents a single component cube. Each array element is defined as a structure, which contains a 8 x 3 array to store the (x,y,z) coordinates of the 8 vertices and a 6 x 3 array to store the colour of the 6 faces of each component cube.
 
->>> Cube initialization:
+>> Cube initialization:
 
 The original vertex coordinates and face colours are assigned in the function initCube(). The initial cube is centered at (0, 0, 0). It has red for the front face, orange for the back, blue for the left, green for the right, white for the top and yellow for the bottom. All the inside faces are grey. The cube is initially viewed from eye position (5, 5, 5) to give a 3-D view of the cube.
 
->>> Rotating whole cube:
+>> Rotating whole cube:
 
 When the J, L, I and K buttons are pressed from the keyboard, the program interprets it as a request from the user to rotate the entire cube, left, right, down and up respectively. 
 
->>> How to play:
+>> How to play:
 
 Commands are case-insensitive
 
