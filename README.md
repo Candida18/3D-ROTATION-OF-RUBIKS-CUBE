@@ -6,7 +6,7 @@ The 3 x 3 x 3 cube is represented by a 3 x 3 x 3 array, where each array element
 
 >> Cube initialization:
 
-The original vertex coordinates and face colours are assigned in the function initCube(). The initial cube is centered at (0, 0, 0). It has red for the front face, orange for the back, blue for the left, green for the right, white for the top and yellow for the bottom. All the inside faces are grey. The cube is initially viewed from eye position (5, 5, 5) to give a 3-D view of the cube.
+The original vertex coordinates and face colours are assigned in the function initCube(). The initial cube is centered at (0, 0, 0). It has red for the front face, orange for the back, blue for the left, green for the right, white for the top and yellow for the bottom. The cube is initially viewed from eye position (5, 5, 5) to give a 3-D view of the cube.
 
 >> Rotating whole cube:
 
