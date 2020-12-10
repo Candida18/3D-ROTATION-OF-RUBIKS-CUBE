@@ -1,6 +1,6 @@
 DESIGN
 
->> Cube data structure: >>
+>> Cube data structure: <<
 
 The 3 x 3 x 3 cube is represented by a 3 x 3 x 3 array, where each array element represents a single component cube. Each array element is defined as a structure, which contains a 8 x 3 array to store the (x,y,z) coordinates of the 8 vertices and a 6 x 3 array to store the colour of the 6 faces of each component cube.
 
